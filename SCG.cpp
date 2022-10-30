@@ -1,18 +1,13 @@
-#include <iostream> 
-#include <stdlib.h> 
-#include <time.h> 
+#include <iostream>
 
-using namespace std; 
+using namespace std;
 
-int main() { 
-	int firstnumber;
-	int secondnumber;
-	int answer;
-	int difference;
+int main() {
+	int firstnumber, secondnumber, answer, difference;
 	
-	cout << "|SCG - Simple Console Generator| \n";
-	cout << "Build v1.0 \n";
-	cout << "\n";
+	cout << "|SCG - Simple Console Generator|" << endl;
+	cout << "Build v1.0.1" << endl;
+	cout << endl;
 	
 	cout << "Enter first number: ";
 	cin >> firstnumber;
@@ -20,18 +15,19 @@ int main() {
 	cout << "Enter second number: ";
 	cin >> secondnumber;
 	
-	cout << "\n";
+	cout << endl;
 	
-	if(firstnumber <= secondnumber){	
-		srand(time(NULL)); 
-		difference = firstnumber - secondnumber; 
+	if(firstnumber < secondnumber){
+		srand(clock());
+		difference = firstnumber - secondnumber;
 	
-		answer = rand() % difference + firstnumber; 
+		answer = rand() % difference + firstnumber;
 		cout << "Conclusion: ";
-		cout << answer << endl; 
+		cout << answer << endl;
 	}
+	
 	else {
-		cout << "Error: Data entered incorrectly!";
+		cout << "Error: Data entered incorrectly!" << endl;
 	}
 		
 	return 0;
